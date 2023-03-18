@@ -1,5 +1,9 @@
-let grade;
-//The function below test the studentMark entered and returns a grade//
+const studentMark=document.getElementById(
+    'studentMark'
+ );
+ const grade=document.getElementById(
+    "grade"
+ )
 function getGrade(studentMark){
     if(studentMark>79){
         grade="A";

@@ -11,14 +11,8 @@ PART 2:Speed Detector
 -A user enters his/her speed. If the speed is within the speed limit a messsage (Ok) is outputted. If not the speed above and the speed limit is used to calculate ones demerit points and output them.
 
 Part 3:Salary Calculator
--
+-A user enters their basic salary and benefits. The program calculates their Net Salary, Pay As You Earn (PAYE), various deductions and gross salary. 
 
-## SCREENSHOTS
-- link 1
-- link 2
-
-
-********
 ## SetUp Instruction
 You will need Visual Studio Code to run this programs by going live.
 ### Requirements

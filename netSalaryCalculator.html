@@ -12,8 +12,9 @@
         <a href="speedDetector.html">Speed-Detector</a>
         <a href="grading.html">Grading-System</a>
     </h1>
-    <button onclick="getUserInput()">Add Basic Salary</button>
-    <button onclick="addBenefits()">Add Benefits</button>
+    <input id="netSalary"/>
+    <input id="Total benefits "/>
+    <h3 id="NetDisplay"></h3>
     <script>
         // Definition of  constants for basic salary, tax rate NHIF and NSSF rates
     const BASIC_SALARY = 250000;
@@ -22,10 +23,9 @@
     const NSSF_RATE = 0.06;
 
     // Getting user input for basic salary and benefits
-    function getUserInput(){
-        (const basicSalary = parseFloat(prompt("Enter your basic salary: "))};
+    const basicSalary = parseFloat(prompt("Enter your basic salary: "));
     const benefits = parseFloat(prompt("Enter the total amount of benefits received: "));
-
+    ;
     // Calculating the gross salary
     const grossSalary = BASIC_SALARY + basicSalary + benefits;
 
@@ -43,6 +43,8 @@
     console.log(`Your NHIF deduction is: ${nhifDeduction.toFixed(2)}`);
     console.log(`Your NSSF deduction is: ${nssfDeduction.toFixed(2)}`);
     console.log(`Your Net salary is: ${netSalary.toFixed(2)}`);
+
+    NetDisplay.innerText=`Your salary is ${netSalary}`;
     </script>
     
 </body>

@@ -14,25 +14,30 @@
     </h1>
     <input id="speed"/>
     <button onclick="detectSpeed()">Detect Speed!</button>
+    <h3 id="showMessage"></h3>
+    <!--Beginning of JavaScript code-->
     <script>
     //Code to detect speed
     //Variables definition
-    let speed ;
+    let speed=document.getElementById('speed')
     const speedLimit=70;
     const distancePerDemeritPoint=5;
-    var message;
+    var message=document.getElementById('showMessage');
     //Function to test input speed and output either a message or one's demerit points
     function detectSpeed(){
-    if(speed<=speedLimit){
-        console.log("Ok.")
+        const speedValue=parseInt(speed.value);
+    if(speedValue<=speedLimit){
+         message="Ok."
     }
     else {
-        const demeritPoints=Math.floor((speed-speedLimit)/kmPerDemeritPoint);
-        console.log(`These are your demerit points:${demeritPoints}`);
+        var demeritPoints=Math.floor((speed-speedLimit)/kmPerDemeritPoint);
+         message=`These are your demerit points:${demeritPoints}`;
     }
-    
+    console.log(message);
+    showMessage.innerText=`${message}`;
 }
 
     </script>
+    <!--Beginning of JavaScript code-->
 </body>
 </html>

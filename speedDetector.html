@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title> Code-challenge-1</title>
 </head>
 <body>
     <h1><!--These are the links to the different parts of the code challenge-->
@@ -12,5 +12,27 @@
         <a href="speedDetector.html">Speed-Detector</a>
         <a href="grading.html">Grading-System</a>
     </h1>
+    <input id="speed"/>
+    <button onclick="detectSpeed()">Detect Speed!</button>
+    <script>
+    //Code to detect speed
+    //Variables definition
+    let speed ;
+    const speedLimit=70;
+    const distancePerDemeritPoint=5;
+    var message;
+    //Function to test input speed and output either a message or one's demerit points
+    function detectSpeed(){
+    if(speed<=speedLimit){
+        console.log("Ok.")
+    }
+    else {
+        const demeritPoints=Math.floor((speed-speedLimit)/kmPerDemeritPoint);
+        console.log(`These are your demerit points:${demeritPoints}`);
+    }
+    
+}
+
+    </script>
 </body>
 </html>

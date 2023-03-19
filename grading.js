@@ -1,22 +1,26 @@
 const studentMark=document.getElementById(
     'studentMark'
- );
- const grade=document.getElementById(
-    "grade"
- )
-function getGrade(studentMark){
-    if(studentMark>79){
-        grade="A";
-    }else if(60<studentMark&&studentMark<80){
-        grade="B";
-    }else if(48<studentMark&&studentMark<60){
-        grade="C";
-    }else if(39<studentMark&&studentMark<50){
-        grade="D";
-    }else if(studentMark<40){
-        grade="E";
-    }
-    return grade;
+);
+const showGrade=document.getElementById(
+    'showGrade'
+)
+function getGrade(){
+const mark=parseInt(studentMark.value);
+let grade;
+if(mark>=80){
+    grade='A';
 }
-console.log(`Enter grade `+ getGrade(75));
-console.log(`The grade is, `+ grade);
+else if(mark>=60){
+    grade='B';
+}
+else if (mark>=50){
+    grade='C';
+}
+else if(mark>=40) {
+     grade='D';
+}
+else{grade='E'
+}
+console.log(grade)
+showGrade.innerText=`Your grade is, ${grade}`;
+}
